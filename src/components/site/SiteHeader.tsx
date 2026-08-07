@@ -29,7 +29,7 @@ export function SiteHeader() {
         scrolled ? "bg-background/85 shadow-soft backdrop-blur-lg" : "bg-transparent",
       )}
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 lg:px-8">
         <a href="#top" className="flex min-w-0 items-center gap-3">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground">
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
@@ -46,7 +46,7 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 xl:flex">
           {links.map((l) => (
             <a
               key={l.href}
@@ -72,7 +72,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-border bg-card text-primary lg:hidden"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-border bg-card text-primary xl:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -80,7 +80,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background/95 px-5 py-4 backdrop-blur lg:hidden">
+        <div className="border-t border-border bg-background/95 px-5 py-4 backdrop-blur xl:hidden">
           <nav className="flex flex-col gap-1">
             {links.map((l) => (
               <a
